@@ -23,7 +23,7 @@ Originally a school project of mine, my main goal for this app is to familiarize
 3. As this was a very basic app, I only worked within the domain of the single branch.
 4. No external libraries/dependencies, as I didn't need any external libraries at that moment.
 
-## Important parts of this projects
+## Important parts of this project
 
 1. A single *activity_main.xml* that contains the visual code of the entire app.
 2. *MainActivity.java* containing the entirety of application logic.
