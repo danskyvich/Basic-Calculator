@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#1c1c1c"
+    >
+
+    <TextView
+    android:id="@+id/display"
+    android:freezesText="true"
+    android:maxLines="2"
+    android:letterSpacing="0.01"
+    android:scrollHorizontally="true"
+    android:layout_width="fill_parent"
+    android:layout_height="150dp"
+    android:autoSizeMaxTextSize="32dp"
+    android:autoSizeMinTextSize="10dp"
+    android:autoSizeStepGranularity="1dp"
+    android:autoSizeTextType="uniform"
+    android:ellipsize="none"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:textColor="#ffffff"
+    android:gravity="end"
+    android:background="@drawable/calculator_display_design"
+    android:layout_margin="5dp"
+    />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginHorizontal="20dp"
+                android:gravity="center_horizontal"
+                >
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnRoot"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_design_dark"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:text="@string/root"
+                    android:textSize="17dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSin"
+                    android:background="@drawable/button_design_dark"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:text="@string/sin"
+                    android:textSize="15dp"
+                    android:textColor="@color/white"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCos"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:background="@drawable/button_design_dark"
+                    android:textColor="@color/white"
+                    android:text="@string/cos"
+                    android:textSize="14dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnTan"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_design_dark"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:text="@string/tan"
+                    android:textSize="15dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"
+                >
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnExpo"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_design_dark"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:text="@string/expo"
+                    android:textSize="17dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum"
+                    />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnPercent"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_design_dark"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:text="@string/percent"
+                    android:textSize="17dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum"
+                    />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnFac"
+                    android:background="@drawable/button_design_dark"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:text="@string/factorial"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum"
+                    />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnPi"
+                    android:textColor="@color/white"
+                    android:text="@string/pi"
+                    android:background="@drawable/button_design_dark"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:textSize="17dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"
+                >
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnLog"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_design_dark"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:text="@string/logarithm"
+                    android:textSize="15dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum"
+                    />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnNaturalLog"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_design_dark"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:text="@string/naturalLog"
+                    android:textSize="15dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum"
+                    />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnNegative"
+                    android:background="@drawable/button_design_dark"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:text="@string/negative"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum"
+                    />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnEuler"
+                    android:textColor="@color/white"
+                    android:text="@string/euler"
+                    android:background="@drawable/button_design_dark"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:textSize="15dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"
+                >
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn7"
+                    android:textColor="@color/white"
+                    android:background="@drawable/numbers_design"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="@string/lblSeven"
+                    android:textSize="30dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn8"
+                    android:background="@drawable/numbers_design"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="@string/lblEight"
+                    android:textSize="30dp"
+                    android:textColor="@color/white"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn9"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/numbers_design"
+                    android:textColor="@color/white"
+                    android:text="@string/lblNine"
+                    android:textSize="30dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnDiv"
+                    android:textColor="@color/white"
+                    android:background="@drawable/arithmetic_operator_designs"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="@string/division"
+                    android:textSize="30dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"
+                >
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn4"
+                    android:background="@drawable/numbers_design"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:textColor="@color/white"
+                    android:text="@string/lblFour"
+                    android:textSize="30dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn5"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/numbers_design"
+                    android:textColor="@color/white"
+                    android:text="@string/lblFive"
+                    android:textSize="30dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn6"
+                    android:background="@drawable/numbers_design"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:textColor="@color/white"
+                    android:text="@string/lblSix"
+                    android:textSize="30dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnMult"
+                    android:textColor="@color/white"
+                    android:background="@drawable/arithmetic_operator_designs"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="@string/multiplication"
+                    android:textSize="23dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"
+                >
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn1"
+                    android:background="@drawable/numbers_design"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:textColor="@color/white"
+                    android:text="@string/lblOne"
+                    android:textSize="30dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn2"
+                    android:background="@drawable/numbers_design"
+                    android:textColor="@color/white"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="@string/lblTwo"
+                    android:textSize="30dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn3"
+                    android:layout_width="60dp"
+                    android:textColor="@color/white"
+                    android:layout_height="60dp"
+                    android:background="@drawable/numbers_design"
+                    android:text="@string/lblThree"
+                    android:textSize="30dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSub"
+                    android:textColor="@color/white"
+                    android:background="@drawable/arithmetic_operator_designs"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="@string/subtraction"
+                    android:textSize="30dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"
+                >
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnClosePar"
+                    android:textColor="@color/white"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text=")"
+                    android:textSize="30dp"
+                    android:background="@drawable/numbers_design"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnZero"
+                    android:background="@drawable/numbers_design"
+                    android:textColor="@color/white"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="@string/lblZero"
+                    android:textSize="30dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnDec"
+                    android:background="@drawable/numbers_design"
+                    android:textColor="@color/white"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="@string/deci"
+                    android:textSize="30dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnAdd"
+                    android:textColor="@color/white"
+                    android:background="@drawable/arithmetic_operator_designs"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="@string/addition"
+                    android:textSize="30dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"
+                >
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnOpenPar"
+                    android:textColor="@color/white"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/numbers_design"
+                    android:text="("
+                    android:textSize="30dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnClear"
+                    android:layout_width="60dp"
+                    android:textColor="@color/white"
+                    android:layout_height="60dp"
+                    android:background="@drawable/clear_entry_design"
+                    android:text="@string/clear"
+                    android:textSize="30dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="inputNum"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnDelete"
+                    android:textColor="@color/white"
+                    android:background="@drawable/delete_design"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="@string/delete"
+                    android:textSize="19dp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="deleteLastInput"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnEquals"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/equals_design"
+                    android:text="@string/equals"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="calculate"
+                    android:focusableInTouchMode="false"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

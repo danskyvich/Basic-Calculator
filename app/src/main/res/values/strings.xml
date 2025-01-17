@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="lblZero">0</string>
+    <string name="lblOne">1</string>
+    <string name="lblTwo">2</string>
+    <string name="lblThree">3</string>
+    <string name="lblFour">4</string>
+    <string name="lblFive">5</string>
+    <string name="lblSix">6</string>
+    <string name="lblSeven">7</string>
+    <string name="lblEight">8</string>
+    <string name="lblNine">9</string>
+    <string name="addition">+</string>
+    <string name="subtraction">-</string>
+    <string name="multiplication">x</string>
+    <string name="division">/</string>
+    <string name="equals">=</string>
+    <string name="deci">.</string>
+    <string name="clear">C</string>
+    <string name="delete">\u232b</string>
+    <string name="root">√</string>
+    <string name="sin">sin</string>
+    <string name="cos">cos</string>
+    <string name="tan">tan</string>
+    <string name="expo">^</string>
+    <string name="percent">%</string>
+    <string name="factorial">x!</string>
+    <string name="pi">π</string>
+    <string name="logarithm">log</string>
+    <string name="naturalLog">In</string>
+    <string name="euler">e</string>
+    <string name="negative">+/-</string>
+</resources>
